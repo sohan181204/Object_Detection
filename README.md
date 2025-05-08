@@ -1,25 +1,51 @@
-# AirFlow - Hand Gesture Based Drawing App
+# Object Detection
 
-AirFlow is a virtual painting tool that allows users to draw on the screen using hand gestures detected through a webcam. It uses MediaPipe to track hand landmarks and OpenCV to render a painting interface.
+This project contains two main functionalities:
 
-## 🛠 Features
+1. **Object Detection** using YOLOv4-tiny via OpenCV's DNN module.
+---
 
-- Draw with fingers in real time using webcam input.
-- Color selection with virtual buttons.
-- Clear screen functionality.
-- Supports multiple colors: Blue, Green, Red, and Yellow.
+## 📦 Contents
 
-## 🧠 Technologies Used
+- `main.py`: Runs YOLOv4-tiny object detection using a webcam.
+- `dnn_model/`: Folder containing `yolov4-tiny.weights`, `yolov4-tiny.cfg`, and `classes.txt`.
 
-- Python
-- OpenCV
-- MediaPipe
-- NumPy
-- Deque (for stroke memory)
+---
 
 ## 🚀 How to Run
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/jaya-sri6/Object_Detection.git
-   cd Object_Detection
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/jaya-sri6/Object_Detection.git
+cd Object_Detection
+
+**2. Install Dependencies**
+bash
+Copy
+Edit
+pip install opencv-python mediapipe numpy
+✅ Ensure your dnn_model folder contains:
+
+yolov4-tiny.weights
+
+yolov4-tiny.cfg
+
+classes.txt
+
+**3. Run Object Detection**
+bash
+Copy
+Edit
+python main.py
+Detects real-time objects using webcam.
+
+Uses YOLOv4-tiny for fast and accurate inference.
+
+📌 Features
+🎯 Real-time object detection with bounding boxes.
+
+🖱️ Click detection in object detection mode via mouse callback.
+
+🎈 Uses lightweight models suitable for real-time use.
+
